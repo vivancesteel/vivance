@@ -43,8 +43,13 @@ export function ContactForm() {
       return;
     }
 
+    const templateParams = {
+      ...data,
+      time: new Date().toLocaleString("pt-BR"),
+    };
+
     try {
-      await emailjs.send(serviceID, templateID, data, publicKey);
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
       reset();
       setSuccessAlert(true);
       setLoaderSend(false);
