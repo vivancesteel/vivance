@@ -7,13 +7,16 @@ import { scrollSection } from "@/app/_utils/utils";
 import { LuChevronDown } from "react-icons/lu";
 import { MenuSheet } from "../menuSheet";
 import { useState } from "react";
-import { InfraModal } from "../infraModal";
+import { InfraModal } from "../modais/infraModal";
+import { TerraplanagemModal } from "../modais/terraplanagemModal";
 
 type ModalRef = "INFRA" | "TERRAPLANAGEM" | "OBRA-CIVIS";
 
 export function Header() {
   const [isOpenOptions, setIsOpenOptions] = useState(false);
   const [isOpenInfraDialog, setIsOpenInfraDialog] = useState(false);
+  const [isOpenTerraplanagemDialog, setIsOpenTerraplanagemDialog] =
+    useState(false);
 
   const toggleOpenDialog = (modalRef: ModalRef) => {
     if (isOpenOptions) {
@@ -24,7 +27,9 @@ export function Header() {
       case "INFRA":
         setIsOpenInfraDialog(!isOpenInfraDialog);
         break;
-
+      case "TERRAPLANAGEM":
+        setIsOpenTerraplanagemDialog(!isOpenTerraplanagemDialog);
+        break;
       default:
         break;
     }
@@ -97,6 +102,13 @@ export function Header() {
       <div className="lg:hidden">
         <MenuSheet />
       </div>
+
+      <TerraplanagemModal
+        isOpen={isOpenTerraplanagemDialog}
+        toggleModal={() =>
+          setIsOpenTerraplanagemDialog(!isOpenTerraplanagemDialog)
+        }
+      />
 
       <InfraModal
         isOpen={isOpenInfraDialog}
