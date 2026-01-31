@@ -41,16 +41,16 @@ export function Footer() {
             <h4 className="text-text-inverse mb-4">Serviços</h4>
             <ul className="text-text-grey-light flex flex-col gap-2">
               <li className="transition-all hover:text-text-active">
-                Construção Residencial
+                Steel Frame
               </li>
               <li className="transition-all hover:text-text-active">
-                Construção Comercial
+                Infraestrutura e saneamento
               </li>
               <li className="transition-all hover:text-text-active">
-                Reformas
+                Terraplanagem e pavimentação
               </li>
               <li className="transition-all hover:text-text-active">
-                Consultoria de Projetos
+                Obras civis
               </li>
             </ul>
           </div>
