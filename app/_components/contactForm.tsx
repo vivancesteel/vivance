@@ -3,7 +3,7 @@
 import { LuLoaderCircle, LuMailCheck, LuSend } from "react-icons/lu";
 import { Button } from "./ui/button";
 import { SubmitHandler, useForm } from "react-hook-form";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { maskPhone } from "../_utils/utils";
 
