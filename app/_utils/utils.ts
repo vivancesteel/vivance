@@ -8,7 +8,7 @@ export function scrollSection(id?: string) {
 }
 
 export function linkWhatsApp(customMessage?: string) {
-  const number = 5551998747124;
+  const number = 5551996864817;
   const defaultMessage = "Olá,%20gostaria%20de%20mais%20informações!";
 
   const url = `https://wa.me/${number}?text=${customMessage ?? defaultMessage}`;
