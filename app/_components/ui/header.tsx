@@ -9,6 +9,7 @@ import { MenuSheet } from "../menuSheet";
 import { useState } from "react";
 import { InfraModal } from "../modais/infraModal";
 import { TerraplanagemModal } from "../modais/terraplanagemModal";
+import { ObrasCivisModal } from "../modais/obrasCivisModal";
 
 type ModalRef = "INFRA" | "TERRAPLANAGEM" | "OBRA-CIVIS";
 
@@ -17,6 +18,7 @@ export function Header() {
   const [isOpenInfraDialog, setIsOpenInfraDialog] = useState(false);
   const [isOpenTerraplanagemDialog, setIsOpenTerraplanagemDialog] =
     useState(false);
+  const [isOpenObrasCivisDialog, setIsOpenObrasCivisDialog] = useState(false);
 
   const toggleOpenDialog = (modalRef: ModalRef) => {
     if (isOpenOptions) {
@@ -29,6 +31,9 @@ export function Header() {
         break;
       case "TERRAPLANAGEM":
         setIsOpenTerraplanagemDialog(!isOpenTerraplanagemDialog);
+        break;
+      case "OBRA-CIVIS":
+        setIsOpenObrasCivisDialog(!isOpenObrasCivisDialog);
         break;
       default:
         break;
@@ -113,6 +118,10 @@ export function Header() {
       <InfraModal
         isOpen={isOpenInfraDialog}
         toggleModal={() => setIsOpenInfraDialog(!isOpenInfraDialog)}
+      />
+      <ObrasCivisModal
+        isOpen={isOpenObrasCivisDialog}
+        toggleModal={() => setIsOpenObrasCivisDialog(!isOpenObrasCivisDialog)}
       />
     </header>
   );
