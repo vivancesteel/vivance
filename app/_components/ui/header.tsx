@@ -16,6 +16,10 @@ export function Header() {
   const [isOpenInfraDialog, setIsOpenInfraDialog] = useState(false);
 
   const toggleOpenDialog = (modalRef: ModalRef) => {
+    if (isOpenOptions) {
+      setIsOpenOptions(false);
+    }
+
     switch (modalRef) {
       case "INFRA":
         setIsOpenInfraDialog(!isOpenInfraDialog);
@@ -61,14 +65,20 @@ export function Header() {
                 <ul className="z-10 px-4 py-3 absolute top-8 right-0 bg-[#272727]  rounded-md shadow-lg">
                   <li
                     className="cursor-pointer p-1 hover:text-text-active transition text-nowrap border-b border-[#444]"
-                    onClick={() => toggleOpenDialog("INFRA")}
+                    onClick={() => toggleOpenDialog("TERRAPLANAGEM")}
                   >
                     Terraplanagem e Pavimentação
                   </li>
-                  <li className="cursor-pointer p-1 hover:text-text-active transition text-nowrap border-b border-[#444]">
+                  <li
+                    className="cursor-pointer p-1 hover:text-text-active transition text-nowrap border-b border-[#444]"
+                    onClick={() => toggleOpenDialog("INFRA")}
+                  >
                     Infraestrutura e saneamento
                   </li>
-                  <li className="cursor-pointer p-1 hover:text-text-active transition text-nowrap">
+                  <li
+                    className="cursor-pointer p-1 hover:text-text-active transition text-nowrap"
+                    onClick={() => toggleOpenDialog("OBRA-CIVIS")}
+                  >
                     Obras civis
                   </li>
                 </ul>
