@@ -18,6 +18,28 @@ export function InfraModal({ isOpen, toggleModal }: ModalServicesProps) {
         <DialogTitle className="text-2xl">Obras de infraestrutura</DialogTitle>
 
         <div className="grid grid-cols-2 gap-6  max-h-[80vh] overflow-y-auto">
+          <div className="grid gap-6 justify-between">
+            <div>
+              <h2 className="text-xl lg:text-3xl text-text-active">
+                Execução de redes urbanas, drenagem e infraestrutura pesada
+              </h2>
+              <p className="text-sm lg:text-base text-text-secundary mt-6">
+                Executamos obras de infraestrutura e saneamento com foco em
+                eficiência, segurança e durabilidade. Atuamos na implantação de
+                redes de água, esgoto e drenagem pluvial, sempre em conformidade
+                com as normas técnicas e ambientais. Nossos serviços abrangem
+                desde os estudos iniciais até a execução e entrega final,
+                garantindo sistemas funcionais e preparados para atender às
+                demandas urbanas e industriais
+              </p>
+            </div>
+
+            <Image
+              src={imagem_3}
+              alt="Imagem 3"
+              className="brightness-70 mt-auto rounded-lg"
+            />
+          </div>
           <div className="grid gap-6">
             <Image
               src={imagem_1}
@@ -39,29 +61,6 @@ export function InfraModal({ isOpen, toggleModal }: ModalServicesProps) {
               src={imagem_2}
               alt="Imagem 2"
               className="brightness-80 rounded-lg"
-            />
-          </div>
-
-          <div className="grid gap-6 justify-between">
-            <div>
-              <h2 className="text-xl lg:text-3xl text-text-active">
-                Execução de redes urbanas, drenagem e infraestrutura pesada
-              </h2>
-              <p className="text-sm lg:text-base text-text-secundary mt-6">
-                Executamos obras de infraestrutura e saneamento com foco em
-                eficiência, segurança e durabilidade. Atuamos na implantação de
-                redes de água, esgoto e drenagem pluvial, sempre em conformidade
-                com as normas técnicas e ambientais. Nossos serviços abrangem
-                desde os estudos iniciais até a execução e entrega final,
-                garantindo sistemas funcionais e preparados para atender às
-                demandas urbanas e industriais
-              </p>
-            </div>
-
-            <Image
-              src={imagem_3}
-              alt="Imagem 3"
-              className="brightness-70 mt-auto rounded-lg"
             />
           </div>
         </div>

@@ -23,31 +23,6 @@ export function TerraplanagemModal({
         </DialogTitle>
 
         <div className="grid grid-cols-2 gap-6  max-h-[80vh] overflow-y-auto">
-          <div className="grid gap-6">
-            <Image
-              src={imagem_1}
-              alt="Imagem 1"
-              className="brightness-74 rounded-lg"
-            />
-
-            <p className="text-sm lg:text-base text-text-secundary">
-              Executamos estruturas de contenção em muros de gabião, garantindo
-              estabilidade para margens, taludes, áreas de risco e a construção
-              de diques, sempre com soluções duráveis e sustentáveis. Na
-              pavimentação, conduzimos todas as etapas — desde a preparação do
-              subleito, terraplenagem e compactação até a aplicação das camadas
-              finais — assegurando qualidade, resistência e longa vida útil para
-              vias e pátios industriais. Trabalhamos com diferentes tipos de
-              pavimento, incluindo CBUQ e pavimento intertravado
-            </p>
-
-            <Image
-              src={imagem_3}
-              alt="Imagem 2"
-              className="brightness-80 rounded-lg"
-            />
-          </div>
-
           <div className="grid gap-6 justify-between">
             <div>
               <h2 className="text-xl lg:text-3xl text-text-active">
@@ -70,6 +45,30 @@ export function TerraplanagemModal({
               src={imagem_2}
               alt="Imagem 3"
               className="brightness-70 mt-auto rounded-lg"
+            />
+          </div>
+          <div className="grid gap-6">
+            <Image
+              src={imagem_1}
+              alt="Imagem 1"
+              className="brightness-74 rounded-lg"
+            />
+
+            <p className="text-sm lg:text-base text-text-secundary">
+              Executamos estruturas de contenção em muros de gabião, garantindo
+              estabilidade para margens, taludes, áreas de risco e a construção
+              de diques, sempre com soluções duráveis e sustentáveis. Na
+              pavimentação, conduzimos todas as etapas — desde a preparação do
+              subleito, terraplenagem e compactação até a aplicação das camadas
+              finais — assegurando qualidade, resistência e longa vida útil para
+              vias e pátios industriais. Trabalhamos com diferentes tipos de
+              pavimento, incluindo CBUQ e pavimento intertravado
+            </p>
+
+            <Image
+              src={imagem_3}
+              alt="Imagem 2"
+              className="brightness-80 rounded-lg"
             />
           </div>
         </div>
