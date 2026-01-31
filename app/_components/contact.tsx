@@ -14,20 +14,20 @@ export function Contact() {
   const contacts: Contact[] = [
     {
       label: "Telefone",
-      opt1: "(51) 99999-9999",
-      opt2: "(51) 33333-3333",
+      opt1: "(51) 98115-1411",
+      opt2: "(51) 99686-4817",
       icon: LuPhone,
     },
     {
       label: "E-mail",
-      opt1: "contato@vivance.com.br",
-      opt2: "orcamento@vivance.com.br",
+      opt1: "contato@vivanceincorporadora.com.br",
+      opt2: "comercial@vivanceincorporadora.com.br",
       icon: LuMail,
     },
     {
       label: "Endereço",
-      opt1: "Av. Exemplo, 1000 - Porto Alegre/RS",
-      opt2: "CEP: 01310-100",
+      opt1: "Av General Flores da Cunha 580, ap 208. Bairro Vila Santo Angelo. Cachoeirinha-RS",
+      opt2: "CEP: 94910-000",
       icon: LuMapPin,
     },
   ];
@@ -65,8 +65,12 @@ export function Contact() {
             <h3 className="text-base sm:text-lg max-w-52.75 mb-4">
               Horário de atendimento
             </h3>
-            <p className="mb-2 text-sm">Segunda a Sexta: 8h às 18h</p>
-            <p className="text-sm">Sábado: 8h às 12h</p>
+            <p className="mb-2 text-sm">
+              Segunda a quinta: Das 7:30 às 12h e das 13:30 às 18h
+            </p>
+            <p className="text-sm">
+              Sexta: Das 7:30 às 12h e das 13:30 às 16:30
+            </p>
           </div>
         </div>
 
