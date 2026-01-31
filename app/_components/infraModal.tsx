@@ -22,10 +22,10 @@ export function InfraModal({ isOpen, toggleModal }: ModalServicesProps) {
             <Image
               src={imagem_1}
               alt="Imagem 1"
-              className="brightness-60 rounded-lg"
+              className="brightness-74 rounded-lg"
             />
 
-            <p className="text-text-secundary">
+            <p className="text-sm lg:text-base text-text-secundary">
               Executamos obras de infraestrutura e saneamento com foco em
               eficiência, segurança e durabilidade. Atuamos na implantação de
               redes de água, esgoto e drenagem pluvial, sempre em conformidade
@@ -44,10 +44,10 @@ export function InfraModal({ isOpen, toggleModal }: ModalServicesProps) {
 
           <div className="grid gap-6 justify-between">
             <div>
-              <h2 className="text-3xl lg:text-4xl text-text-active">
+              <h2 className="text-xl lg:text-3xl text-text-active">
                 Execução de redes urbanas, drenagem e infraestrutura pesada
               </h2>
-              <p className="text-text-secundary">
+              <p className="text-sm lg:text-base text-text-secundary mt-6">
                 Executamos obras de infraestrutura e saneamento com foco em
                 eficiência, segurança e durabilidade. Atuamos na implantação de
                 redes de água, esgoto e drenagem pluvial, sempre em conformidade
