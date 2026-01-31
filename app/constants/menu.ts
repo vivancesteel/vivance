@@ -10,5 +10,5 @@ export const menuArray: Menu[] = [
   { txt: "Catálogo de projetos", sectionId: "projectCatalog" },
   { txt: "Processos", sectionId: "process" },
   { txt: "Contato", sectionId: "contact" },
-  // { txt: "Outros serviços", isSelect: true },
+  { txt: "Outros serviços", isSelect: true },
 ];

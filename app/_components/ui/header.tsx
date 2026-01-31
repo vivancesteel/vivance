@@ -9,12 +9,21 @@ import { MenuSheet } from "../menuSheet";
 import { useState } from "react";
 import { InfraModal } from "../infraModal";
 
+type ModalRef = "INFRA" | "TERRAPLANAGEM" | "OBRA-CIVIS";
+
 export function Header() {
   const [isOpenOptions, setIsOpenOptions] = useState(false);
   const [isOpenInfraDialog, setIsOpenInfraDialog] = useState(false);
 
-  const toggleOpenInfraDialog = () => {
-    setIsOpenInfraDialog(!isOpenInfraDialog);
+  const toggleOpenDialog = (modalRef: ModalRef) => {
+    switch (modalRef) {
+      case "INFRA":
+        setIsOpenInfraDialog(!isOpenInfraDialog);
+        break;
+
+      default:
+        break;
+    }
   };
 
   const openSelect = () => {
@@ -52,18 +61,15 @@ export function Header() {
                 <ul className="z-10 px-4 py-3 absolute top-8 right-0 bg-[#272727]  rounded-md shadow-lg">
                   <li
                     className="cursor-pointer p-1 hover:text-text-active transition text-nowrap border-b border-[#444]"
-                    onClick={() => toggleOpenInfraDialog()}
+                    onClick={() => toggleOpenDialog("INFRA")}
                   >
-                    Obras de infraestrutura
+                    Terraplanagem e Pavimentação
                   </li>
                   <li className="cursor-pointer p-1 hover:text-text-active transition text-nowrap border-b border-[#444]">
-                    Obras de saneamento
-                  </li>
-                  <li className="cursor-pointer p-1 hover:text-text-active transition text-nowrap border-b border-[#444]">
-                    Obras civis e industriais
+                    Infraestrutura e saneamento
                   </li>
                   <li className="cursor-pointer p-1 hover:text-text-active transition text-nowrap">
-                    Terraplanagem e Pavimentação
+                    Obras civis
                   </li>
                 </ul>
               </>
@@ -84,7 +90,7 @@ export function Header() {
 
       <InfraModal
         isOpen={isOpenInfraDialog}
-        toggleModal={toggleOpenInfraDialog}
+        toggleModal={() => setIsOpenInfraDialog(!isOpenInfraDialog)}
       />
     </header>
   );
