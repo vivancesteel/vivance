@@ -23,7 +23,7 @@ export function Footer() {
                 alt="Logo do Vivance Incorporadora"
                 height={30}
               />
-              <span className="text-md xl:text-xl text-text-inverse">
+              <span className="font-logo text-md xl:text-xl text-text-inverse">
                 Vivance Incorporadora
               </span>
             </div>

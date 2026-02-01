@@ -4,11 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --font-ui-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-
   --surface-primary: #a7762d;
   --surface-hover-primary: #946826;
   --surface-inverse: #fdfdfd;
@@ -101,6 +96,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-roboto-sans);
   --font-mono: var(--font-roboto-mono);
+  --font-logo: var(--font-logo);
 
   --color-surface-primary: var(--surface-primary);
   --color-surface-inverse: var(--surface-inverse);

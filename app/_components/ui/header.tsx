@@ -52,7 +52,7 @@ export function Header() {
           src={logo}
           alt="Logo do Vivance Incorporadora"
         />
-        <span className="inline-flex lg:hidden xl:inline-flex text-lg lg:text-2xl text-text-inverse">
+        <span className="font-logo inline-flex lg:hidden xl:inline-flex text-lg lg:text-2xl text-text-inverse">
           Vivance Incorporadora
         </span>
       </div>
