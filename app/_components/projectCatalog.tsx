@@ -71,9 +71,9 @@ export function ProjectCatalog() {
               <h3 className="text-lg text-text-inverse mb-3 mt-2">
                 {card.title}
               </h3>
-              <p className="text-text-inverse-secundary text-md">
+              {/* <p className="text-text-inverse-secundary text-md">
                 {card.details}
-              </p>
+              </p> */}
             </div>
           </div>
         ))}
