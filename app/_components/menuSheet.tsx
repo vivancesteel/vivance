@@ -53,27 +53,47 @@ export function MenuSheet() {
         className={`fixed right-0 top-0 z-50 h-full w-72 bg-surface-secundary shadow-lg transition-transform duration-300
           ${open ? "translate-x-0" : "translate-x-full"}`}
       >
-        <div className="flex items-center justify-between p-4 border-b">
-          <span className="font-semibold text-text-grey-light">Menu</span>
+        <div className="flex items-center justify-between p-4 border-[#444] border-b">
+          <span className="text-sm font-semibold text-text-grey-light">
+            Menu
+          </span>
           <button onClick={() => setOpen(false)}>
             <LuX className="text-text-grey-light" size={22} />
           </button>
         </div>
 
         <nav className="flex flex-col p-4 gap-4">
-          {menuArray.map((item, index) => (
-            <button
-              key={index}
-              onClick={() =>
-                item.isSelect ? null : handleClick(item.sectionId)
-              }
-              className="text-left text-text-inverse flex items-center gap-2 hover:text-text-active transition"
-            >
-              {item.txt}
-              {item.isSelect && <LuChevronDown size={20} />}
-            </button>
-          ))}
+          {menuArray.map(
+            (item, index) =>
+              !item.isSelect && (
+                <button
+                  key={index}
+                  onClick={() =>
+                    item.isSelect ? null : handleClick(item.sectionId)
+                  }
+                  className="text-left text-text-inverse flex items-center gap-2 hover:text-text-active transition"
+                >
+                  {item.txt}
+                  {item.isSelect && <LuChevronDown size={20} />}
+                </button>
+              ),
+          )}
         </nav>
+
+        <div className="p-4 ">
+          <h1 className="text-sm pb-2 font-semibold text-text-grey-light">
+            Outros Serviços
+          </h1>
+
+          <div className="flex flex-col gap-4">
+            <button className="text-left text-text-inverse flex items-center gap-2 hover:text-text-active transition">
+              options
+            </button>
+            <button className="text-left text-text-inverse flex items-center gap-2 hover:text-text-active transition">
+              options
+            </button>
+          </div>
+        </div>
       </aside>
     </>
   );

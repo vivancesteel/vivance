@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import logo from "@/public/logo.png";
-import { menuArray } from "@/app/constants/menu";
+import { menuArray, outrosServicosArray } from "@/app/constants/menu";
 import { scrollSection } from "@/app/_utils/utils";
 import { LuChevronDown } from "react-icons/lu";
 import { MenuSheet } from "../menuSheet";
@@ -10,8 +10,7 @@ import { useState } from "react";
 import { InfraModal } from "../modais/infraModal";
 import { TerraplanagemModal } from "../modais/terraplanagemModal";
 import { ObrasCivisModal } from "../modais/obrasCivisModal";
-
-type ModalRef = "INFRA" | "TERRAPLANAGEM" | "OBRA-CIVIS";
+import { ModalRef } from "@/app/_types/modalRef";
 
 export function Header() {
   const [isOpenOptions, setIsOpenOptions] = useState(false);
@@ -72,25 +71,16 @@ export function Header() {
 
             {menu.isSelect && isOpenOptions && (
               <>
-                <ul className="z-10 px-4 py-3 absolute top-8 right-0 bg-[#272727]  rounded-md shadow-lg">
-                  <li
-                    className="cursor-pointer p-1 hover:text-text-active transition text-nowrap border-b border-[#444]"
-                    onClick={() => toggleOpenDialog("TERRAPLANAGEM")}
-                  >
-                    Terraplanagem e Pavimentação
-                  </li>
-                  <li
-                    className="cursor-pointer p-1 hover:text-text-active transition text-nowrap border-b border-[#444]"
-                    onClick={() => toggleOpenDialog("INFRA")}
-                  >
-                    Infraestrutura e saneamento
-                  </li>
-                  <li
-                    className="cursor-pointer p-1 hover:text-text-active transition text-nowrap"
-                    onClick={() => toggleOpenDialog("OBRA-CIVIS")}
-                  >
-                    Obras civis
-                  </li>
+                <ul className="z-10 px-4 py-3 absolute top-8 right-0 bg-[#272727] rounded-md shadow-lg">
+                  {outrosServicosArray.map((servico, index) => (
+                    <li
+                      key={index}
+                      className="cursor-pointer p-1 hover:text-text-active transition text-nowrap not-last:border-b border-[#444]"
+                      onClick={() => toggleOpenDialog(servico.modalRef)}
+                    >
+                      {servico.txt}
+                    </li>
+                  ))}
                 </ul>
               </>
             )}
