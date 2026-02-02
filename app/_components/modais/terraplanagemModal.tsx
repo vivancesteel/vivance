@@ -17,19 +17,19 @@ export function TerraplanagemModal({
 }: ModalServicesProps) {
   return (
     <Dialog open={isOpen} onOpenChange={() => toggleModal()}>
-      <DialogContent className="min-w-fit bg-surface-inverse">
-        <DialogTitle className="text-2xl">
+      <DialogContent className="min-w-fit bg-surface-inverse px-2 lg:px-6">
+        <DialogTitle className="tex-lg lg:text-2xl">
           Terraplanagem e Pavimentação
         </DialogTitle>
 
-        <div className="grid grid-cols-2 gap-6  max-h-[80vh] overflow-y-auto">
-          <div className="grid gap-6 justify-between">
+        <div className="grid grid-cols-2 gap-2 md:gap-6 max-h-[80vh] overflow-y-auto">
+          <div className="grid gap-2 md:gap-6 justify-between">
             <div>
-              <h2 className="text-xl lg:text-3xl text-text-active">
+              <h2 className="text-lg md:text-2lx lg:text-3xl text-text-active">
                 Base sólida para o desenvolvimento de obras urbanas e
                 industriais
               </h2>
-              <p className="text-sm lg:text-base text-text-secundary mt-6">
+              <p className="text-sm lg:text-base text-text-secundary mt-2 md:mt-6">
                 Realizamos serviços de terraplanagem e pavimentação com alto
                 rigor técnico e monitoramento topográfico contínuo. Asseguramos
                 o preparo adequado do solo, nivelamento preciso, compactação
@@ -47,7 +47,7 @@ export function TerraplanagemModal({
               className="brightness-70 mt-auto rounded-lg"
             />
           </div>
-          <div className="grid gap-6">
+          <div className="grid gap-2 md:gap-6">
             <Image
               src={imagem_1}
               alt="Imagem 1"

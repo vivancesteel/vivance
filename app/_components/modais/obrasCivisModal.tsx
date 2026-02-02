@@ -14,17 +14,17 @@ type ModalServicesProps = {
 export function ObrasCivisModal({ isOpen, toggleModal }: ModalServicesProps) {
   return (
     <Dialog open={isOpen} onOpenChange={() => toggleModal()}>
-      <DialogContent className="min-w-fit bg-surface-inverse">
-        <DialogTitle className="text-2xl">Obras civis</DialogTitle>
+      <DialogContent className="min-w-fit bg-surface-inverse px-2 lg:px-6">
+        <DialogTitle className="tex-lg lg:text-2xl">Obras civis</DialogTitle>
 
-        <div className="grid grid-cols-2 gap-6  max-h-[80vh] overflow-y-auto">
-          <div className="grid gap-6 justify-between">
+        <div className="grid grid-cols-2 gap-2 md:gap-6 max-h-[80vh] overflow-y-auto">
+          <div className="grid gap-2 md:gap-6 justify-between">
             <div>
-              <h2 className="text-xl lg:text-3xl text-text-active">
+              <h2 className="text-lg md:text-2lx lg:text-3xl text-text-active">
                 Consultoria e execução de estruturas civis e metálicas para
                 obras industriais e corporativas
               </h2>
-              <p className="text-sm lg:text-base text-text-secundary mt-6">
+              <p className="text-sm lg:text-base text-text-secundary mt-2 md:mt-6">
                 Execução de obras civis de médio e grande porte, incluindo
                 fundações, estruturas de concreto armado, alvenarias e
                 fechamento de fachadas. Atuamos também na execução e montagem de
@@ -43,7 +43,7 @@ export function ObrasCivisModal({ isOpen, toggleModal }: ModalServicesProps) {
               className="brightness-85 mt-auto rounded-lg"
             />
           </div>
-          <div className="grid gap-6">
+          <div className="grid gap-2 md:gap-6">
             <Image
               src={imagem_1}
               alt="Imagem 1"
