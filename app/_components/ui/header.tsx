@@ -95,7 +95,7 @@ export function Header() {
       </ul>
 
       <div className="lg:hidden">
-        <MenuSheet />
+        <MenuSheet onOpenModal={(modalRef) => toggleOpenDialog(modalRef)} />
       </div>
 
       <TerraplanagemModal

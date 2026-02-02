@@ -1,11 +1,16 @@
 "use client";
 
-import { menuArray } from "@/app/constants/menu";
+import { menuArray, outrosServicosArray } from "@/app/constants/menu";
 import { useEffect, useState } from "react";
 import { HiMiniBars3 } from "react-icons/hi2";
 import { LuChevronDown, LuX } from "react-icons/lu";
+import { ModalRef } from "../_types/modalRef";
 
-export function MenuSheet() {
+type MenuSheetProps = {
+  onOpenModal: (modalRef: ModalRef) => void;
+};
+
+export function MenuSheet({ onOpenModal }: MenuSheetProps) {
   const [open, setOpen] = useState(false);
 
   function handleClick(sectionId?: string) {
@@ -86,12 +91,18 @@ export function MenuSheet() {
           </h1>
 
           <div className="flex flex-col gap-4">
-            <button className="text-left text-text-inverse flex items-center gap-2 hover:text-text-active transition">
-              options
-            </button>
-            <button className="text-left text-text-inverse flex items-center gap-2 hover:text-text-active transition">
-              options
-            </button>
+            {outrosServicosArray.map((servico, index) => (
+              <button
+                key={index}
+                className="text-left text-text-inverse flex items-center gap-2 hover:text-text-active transition"
+                onClick={() => {
+                  setOpen(false);
+                  onOpenModal(servico.modalRef);
+                }}
+              >
+                {servico.txt}
+              </button>
+            ))}
           </div>
         </div>
       </aside>
